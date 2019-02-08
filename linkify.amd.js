@@ -22,8 +22,12 @@ define('linkify', ['exports'], function (exports) {
 		events: null,
 		format: noop,
 		formatHref: noop,
-		prefix: noop,
-		postfix: noop,
+		prefix: function prefix() {
+			return null;
+		},
+		postfix: function postfix() {
+			return null;
+		},
 		nl2br: false,
 		tagName: 'a',
 		target: typeToTarget,
